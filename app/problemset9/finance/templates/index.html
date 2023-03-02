@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block main %}
+<table>
+    <thead>
+        <tr>
+            <td>SYMBOL</td>
+            <td>COMPANY</td>
+            <td>SHARES</td>
+            <td>PRICE</td>
+            <td>TOTAL</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in data%}
+        <tr>
+            <td>{{i["symbol"]}}</td>
+            <td>{{i["company"]}}</td>
+            <td>{{i["shares"]}}</td>
+            <td>${{i["price"]}}</td>
+            <td>${{i["total"]}}</td>
+        </tr>
+        {%endfor%}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Cash</td>
+            <td>${{cash["cash"]}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>10,000.00</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

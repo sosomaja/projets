@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let correct = document.querySelector('.right');
+            correct.addEventListener('click', function () {
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#feedback').innerHTML = "correct!";
+            })
+            let incorrect = document.querySelectorAll('.wrong');
+            for (let i = 0; i < incorrect.length; i++) {
+                incorrect[i].addEventListener('click', function () {
+                    incorrect[i].style.backgroundColor = 'red';
+                    document.querySelector('#feedback').innerHTML = 'incorrect :(';
+                })
+            }
+            document.querySelector('#check').addEventListener('click', function () {
+                let answer = document.querySelector('input').value;
+                if (answer === 'Swizterland') {
+                    document.querySelector('#feedback2').innerHTML = 'correct!';
+                    document.querySelector('input').style.backgroundColor = 'green';
+                }
+                else {
+                    document.querySelector('#feedback2').innerHTML = 'incorrect!';
+                    document.querySelector('input').style.backgroundColor = 'red';
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3>What is the approximate ratio of people to sheep in New Zealend?</h3>
+            <button class="wrong">6 people per 1 sheep</button><button class="wrong">3 people per 1
+                sheep</button><button class="wrong">1 person per 1 sheep</button><button class="wrong">1 person per 3
+                sheep</button><button class="right">1 person per 6
+                sheep</button>
+            <p id="feedback"></p>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>hat is the approximate ratio of people to sheep in New Zealend?</h3>
+            <input type="text"></input>
+            <button id="check">check answer</button>
+            <p id="feedback2"></p>
+        </div>
+    </div>
+</body>
+
+</html>

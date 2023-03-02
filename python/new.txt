@@ -1,0 +1,33 @@
+to run a python program - python file.py
+to import a library - import cs50
+to print to terminal - print("hello world")
+to import certain function from a library - from cs50 import get_string
+to print to terminal with formatted string - print(f"Hello {name}")
+to prompt user to enter string and assign it to variable - name = input("Enter your name: ")
+list comprehension - list=[x for x in range(500)] //creates list of numbers from 0 to 499
+
+
+SQL -
+ to execute sql file on a database file - cat 5.sql | sqlite3 songs.db
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

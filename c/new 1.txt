@@ -1,0 +1,140 @@
+*Manual to c libraries: https://manual.cs50.io/
+
+To create new c file:
+code hello.c
+
+To compile/(recompile after editing code) c file:
+make hello
+
+To run c file:
+./hello
+
+Boilerplate:
+#include <stdio.h>
+int main(void){
+
+}
+
+To print a statement to the terminal:
+printf("Hello World");
+
+To take input from user:
+int i;
+scanf("%i".&i);
+printf("%i",i);
+
+To take string input from user:
+char s[30];
+fgets(s,sizeof(s),stdin);
+puts(s);
+
+To assign a string to a variable:
+char s[] = "Santiago Montoya";
+
+To use conditionals:
+if (x<y || x>y){
+statements;}
+else if(x>y && x<y){
+statements;}
+else{
+statements;}
+
+To use while loop:
+while (c>0){
+printf("");
+c-=1;
+}
+
+To use for loop:
+for(int i=0;i<2;i++){
+statements;
+}
+
+To create a function that returns a value:
+dtype fname(parameters){
+statements;
+return n;
+}
+
+to type cast a variable:
+int x=3,y=4;
+float z = (float) x / (float) y;
+
+to declare an array:
+int arr[3];
+arr[0]= 1;
+arr[1]=5;
+
+changing colors in terminal - https://www.theurbanpenguin.com/4184-2/
+printf("\033[1;31m");
+
+to create a custom data structure:
+typedef struct{
+string name;
+string number;
+}
+person;
+int main(){
+person people[2];
+people[0].name = ;
+people[1].number = ;
+}
+
+compiling - clang -o file file.c -lcs50
+
+to find length of array - int n=sizeof(arr)/sizeof(arr[0]);
+
+
+
+to create a pointer variable - 
+int n=50;
+int *p=&n;
+//* declares a (pointer to an integer) called p
+//& refrences the address of the variable n
+//p will be assigned the address of n
+//to use a pointer derefrence it with *p (ex- printf("%i",*p); will print out 50 not the address)
+
+string is a pointer to a character- string s= char *s;
+
+#include <stdlib.h>
+malloc() //asks the OS for x bytes of memory
+free() //tells the OS to free x bytes of memory 
+//you have to use both malloc() and free() to avoid bugs and computer freezing
+//malloc will return NULL if its asked for way too much memory (so add (if(s==NULL)return 1))
+
+valgrind ./program //will diagnose any memory errors in the program and show them on terminal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

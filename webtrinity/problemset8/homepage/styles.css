@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    font-size: large;
+    color: green;
+}
+
+#greet {
+    background-color: aqua;
+}
+
+.col {
+    background-color: blue;
+}
+
+p {
+    color: yellow;
+}

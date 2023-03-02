@@ -1,0 +1,24 @@
+{%extends "layout.html"%}
+{%block title%}
+Quoted
+{%endblock%}
+{%block main%}
+<div class="mb-3">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{data["name"]}}</td>
+                <td>${{data["price"]}}</td>
+                <td>{{data["symbol"]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{%endblock%}

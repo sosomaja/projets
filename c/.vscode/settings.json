@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "cs50.h": "c",
+        "stdio.h": "c",
+        "cmath": "c",
+        "getopt.h": "c",
+        "time.h": "c",
+        "iostream": "cpp"
+    }
+}
